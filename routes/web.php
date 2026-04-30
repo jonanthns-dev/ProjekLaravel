@@ -18,3 +18,4 @@ Route::get('/tentang' , function () {
 
 Route::resource('/falkutas',FalkutasController::class);
 Route::resource('/periode',PeriodeController::class);
+Route::resource('/prodi',[ProdiController::class,'index']);
