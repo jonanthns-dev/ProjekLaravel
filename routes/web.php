@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdiController;
 use App\Http\Controllers\FalkutasController;
 use App\Http\Controllers\PeriodeController;
 use Illuminate\Support\Facades\Route;
@@ -18,4 +19,4 @@ Route::get('/tentang' , function () {
 
 Route::resource('/falkutas',FalkutasController::class);
 Route::resource('/periode',PeriodeController::class);
-Route::resource('/prodi',[ProdiController::class,'index']);
+Route::resource('/prodi',ProdiController::class);
