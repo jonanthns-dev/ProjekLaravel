@@ -14,6 +14,7 @@ class ProdiController extends Controller
     {
        $prodis = Prodi::with('fakultas')->get();
         return view('prodi.index', compact('prodis'));
+        // return $prodis;
     }
 
     /**

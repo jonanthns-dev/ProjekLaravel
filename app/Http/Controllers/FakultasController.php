@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Falkutas;
+use App\Models\Fakultas;
 use Illuminate\Http\Request;
 
-class FalkutasController extends Controller
+class FakultasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,9 @@ class FalkutasController extends Controller
     public function index()
     {
         // akses tabel Falkutas
-        $result = Falkutas:: all(); // SELECT * FROM Falkutas
+        $result = Fakultas:: all(); // SELECT * FROM Falkutas
         //dd($result); //dump data
-        return view('falkutas.index', compact('result'));// kirim data ke view
+        return view('fakultas.index', compact('result'));// kirim data ke view
         
     }
 
@@ -38,7 +38,7 @@ class FalkutasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Falkutas $falkutas)
+    public function show(Fakultas $fakultas)
     {
         //
     }
@@ -46,7 +46,7 @@ class FalkutasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Falkutas $falkutas)
+    public function edit(Fakultas $fakultas)
     {
         //
     }
@@ -54,7 +54,7 @@ class FalkutasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Falkutas $falkutas)
+    public function update(Request $request,Fakultas $fakultas)
     {
         //
     }
@@ -62,7 +62,7 @@ class FalkutasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Falkutas $falkutas)
+    public function destroy(Fakultas $fakultas)
     {
         //
     }

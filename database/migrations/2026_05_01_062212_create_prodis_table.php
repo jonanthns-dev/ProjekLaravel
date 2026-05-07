@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama_prodi');
             $table->char('singkatan', 2);
             $table->string('kaprodi', 30);
-            $table->foreignId('falkutas_id')->constrained('falkutas')->onDelete('cascade');
+            $table->foreignId('fakultas_id')->constrained('fakultas')->onDelete('cascade');
             $table->timestamps();
         });
     }
