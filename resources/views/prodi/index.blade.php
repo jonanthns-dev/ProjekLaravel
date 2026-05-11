@@ -1,23 +1,30 @@
+
 @extends('main')
 
-@section('content' )
+ @section('title', 'Prodi')
 
-    
-    @section('title')
+@section('content')
+        
+
+    <a href="{{ route('prodi.create') }}" class="btn btn-xs btn-primary">Tambah</a>
+    <a href="{{ route('prodi.create') }}" class="btn btn-xs btn-danger">Hapus</a>
+    <a href="{{ route('prodi.create') }}" class="btn btn-xs btn-warning">Edit</a>
     <h1>Data Prodi</h1>
-    @endsection
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                 <th>No</th>
+                <th>Nama</th>
+                 <th>Singkatan</th>
+                 <th>Kaprodi</th>
+                <th>Fakultas</th>
+                <th>Singkatan Fakultas</th>
+            </tr>
+        </thead>
+   
 
-<table border="1" cellpadding="10" class="table table-bordered">
-    <tr>
-        <th>No</th>
-        <th>Nama Prodi</th>
-        <th>Singkatan</th>
-        <th>Kaprodi</th>
-        <th>Fakultas</th>
-        <th>Singkatan Fakultas</th>
-    </tr>
-
-    @foreach($prodis as $key => $prodi)
+    <tbody>
+        @foreach($prodis as $key => $prodi)
     <tr>
         <td>{{ $key + 1 }}</td>
         <td>{{ $prodi->nama_prodi }}</td>
@@ -25,10 +32,8 @@
         <td>{{ $prodi->kaprodi }}</td>
         <td>{{ $prodi->fakultas->nama_fakultas  }}</td>
         <td>{{ $prodi->fakultas->singkatan  }}</td>
-        {{-- <td>{{ $prodi->  }}</td> --}}
     </tr>
     @endforeach
-
-</table>
+    </tbody>
+    </table>
 @endsection
-
