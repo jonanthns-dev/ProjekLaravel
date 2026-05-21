@@ -7,8 +7,7 @@
         
 
     <a href="{{ route('prodi.create') }}" class="btn btn-xs btn-primary">Tambah</a>
-    <a href="{{ route('prodi.create') }}" class="btn btn-xs btn-danger">Hapus</a>
-    <a href="{{ route('prodi.create') }}" class="btn btn-xs btn-warning">Edit</a>
+
     <h1>Data Prodi</h1>
     <table class="table table-bordered">
         <thead>

@@ -56,15 +56,27 @@ class FakultasController extends Controller
      */
     public function edit(Fakultas $fakultas)
     {
-        //
+        
+    //$fakultas = Fakultas::find($fakultas, 'id')
+   // return view('fakultas.edit', compact ('fakultas'));
+
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request,Fakultas $fakultas)
+    public function update(Request $request, $fakultas)
     {
-        //
+        // dd($request);
+       $input = $request->validate([
+        'nama_fakultas' => 'required | unique:fakultas,nama_fakultas,' . $fakultas,
+        'singkatan' => 'required'
+       ]);
+
+      // Fakultas::where('id', $fakultas)->($input);
+
+       return redirect()->route('fakultas.index');
     }
 
     /**

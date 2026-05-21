@@ -7,8 +7,7 @@
         
 
     <a href="{{ route('periode.create') }}" class="btn btn-xs btn-primary">Tambah</a>
-    <a href="{{ route('periode.create') }}" class="btn btn-xs btn-danger">Hapus</a>
-    <a href="{{ route('periode.create') }}" class="btn btn-xs btn-warning">Edit</a>
+
     <h1>Periode</h1>
     <table class="table table-bordered">
         <thead>
@@ -37,7 +36,9 @@
 <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
     data-toggle="tooltip" title='Delete'
     data-nama='{{ $item->tahun_akademik}}'>Hapus</button>
-</form></td>
+</form>
+    <a href="{{ route('fakultas.store') }}" class="btn btn-xs btn-warning btn-primary">Edit</a>
+</td>
         </tr>
           
       @endforeach

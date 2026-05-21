@@ -6,8 +6,6 @@
         
 
     <a href="{{ route('fakultas.create') }}" class="btn btn-xs btn-primary">Tambah</a>
-    <a href="{{ route('fakultas.create') }}" class="btn btn-xs btn-danger">Hapus</a>
-    <a href="{{ route('fakultas.create') }}" class="btn btn-xs btn-warning">Edit</a>
     <h1>Fakultas</h1>
     <table class="table table-bordered">
         <thead>
@@ -30,15 +28,17 @@
        <tr>
         <td>{{ $item->nama_fakultas }} </td>
         <td> {{ $item->singkatan }}     </td>
-        <td>
+        <td class="d-flex ">
             <form method="POST" action="{{ route('fakultas.destroy', $item->id) }}">
     @csrf
     <input name="_method" type="hidden" value="DELETE">
-    <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+    <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm me-2"
     data-toggle="tooltip" title='Delete'
     data-nama='{{ $item->nama_fakultas }}'>Hapus</button>
     </form>
-        </td>
+
+    <a href="{{ route('fakultas.store') }}" class="btn btn-xs btn-warning btn-primary">Edit</a>
+        </td>   
         </tr>
           
       @endforeach
