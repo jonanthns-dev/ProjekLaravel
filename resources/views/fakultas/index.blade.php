@@ -37,7 +37,10 @@
     data-nama='{{ $item->nama_fakultas }}'>Hapus</button>
     </form>
 
-    <a href="{{ route('fakultas.store') }}" class="btn btn-xs btn-warning btn-primary">Edit</a>
+<a href="{{ route('fakultas.edit', $item->id) }}"
+class="btn btn-warning">
+    Edit
+</a>
         </td>   
         </tr>
           

@@ -57,8 +57,7 @@ class FakultasController extends Controller
     public function edit(Fakultas $fakultas)
     {
         
-    //$fakultas = Fakultas::find($fakultas, 'id')
-   // return view('fakultas.edit', compact ('fakultas'));
+    return view('fakultas.edit', compact('fakultas'));
 
 
     }
@@ -74,7 +73,7 @@ class FakultasController extends Controller
         'singkatan' => 'required'
        ]);
 
-      // Fakultas::where('id', $fakultas)->($input);
+    //    Fakultas::where('id', $fakultas)->($input);
 
        return redirect()->route('fakultas.index');
     }

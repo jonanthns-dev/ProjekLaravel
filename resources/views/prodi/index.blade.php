@@ -18,6 +18,7 @@
                  <th>Kaprodi</th>
                 <th>Fakultas</th>
                 <th>Singkatan Fakultas</th>
+                 <th>aksi</th>
             </tr>
         </thead>
    
@@ -31,6 +32,7 @@
         <td>{{ $prodi->kaprodi }}</td>
         <td>{{ $prodi->fakultas->nama_fakultas  }}</td>
         <td>{{ $prodi->fakultas->singkatan  }}</td>
+        <td></td>
     </tr>
     @endforeach
     </tbody>

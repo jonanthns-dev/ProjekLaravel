@@ -30,14 +30,14 @@
        <tr>
         <td> {{ $item->tahun_akademik }}  </td>
         <td> {{ $item->semester }}    </td>
-        <td><form method="POST" action="{{ route('periode.destroy', $item->id) }}">
+        <td class="d-flex"><form method="POST" action="{{ route('periode.destroy', $item->id) }}">
 @csrf
 <input name="_method" type="hidden" value="DELETE">
-<button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+<button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm me-2"
     data-toggle="tooltip" title='Delete'
     data-nama='{{ $item->tahun_akademik}}'>Hapus</button>
 </form>
-    <a href="{{ route('fakultas.store') }}" class="btn btn-xs btn-warning btn-primary">Edit</a>
+    <a href="{{ route('periode.store') }}" class="btn btn-xs btn-warning btn-primary">Edit</a>
 </td>
         </tr>
           
