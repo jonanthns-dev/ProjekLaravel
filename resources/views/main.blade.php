@@ -364,6 +364,15 @@
                   <p>Periode</p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="{{ route('mahasiswa.index') }}" 
+                class="nav-link">
+                  <i class="bi bi-people"></i>
+                  <p>Mahasiswa</p>
+                </a>
+              </li>
+
             <!--end::Sidebar Menu-->
           </nav>
         </div>
